@@ -46,6 +46,7 @@ public class Pracownik extends Osoba{
     @Override
     public String toString() {
         return "Dane pracownika: \n" +
+                "ID: " + id + '\n' +
                 "Imie: " + imie + '\n' +
                 "Nazwisko: " + nazwisko + '\n' +
                 "Data urodzenia: " + dataUr + '\n' +

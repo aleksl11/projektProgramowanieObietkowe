@@ -19,6 +19,7 @@ public class Klient extends Osoba{
     @Override
     public String toString() {
         return "Dane klienta: \n" +
+                "ID: " + id + '\n' +
                 "Imie: " + imie + '\n' +
                 "Nazwisko: " + nazwisko + '\n' +
                 "Data urodzenia: " + dataUr + '\n' +
