@@ -1,6 +1,3 @@
-import java.sql.ResultSet;
-import java.sql.SQLException;
-
 public class Klient extends Osoba{
     String dataDolaczenia;
     int idGr, wplaty,dlKarnetu;

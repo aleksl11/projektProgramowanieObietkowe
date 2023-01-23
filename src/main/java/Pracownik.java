@@ -11,38 +11,6 @@ public class Pracownik extends Osoba{
         this.stanowisko = stanowisko;
     }
 
-    public String getDataZatrudnienia() {
-        return dataZatrudnienia;
-    }
-
-    public void setDataZatrudnienia(String dataZatrudnienia) {
-        this.dataZatrudnienia = dataZatrudnienia;
-    }
-
-    public int getWynagrodzenie() {
-        return wynagrodzenie;
-    }
-
-    public void setWynagrodzenie(int wynagrodzenie) {
-        this.wynagrodzenie = wynagrodzenie;
-    }
-
-    public String geteMail() {
-        return eMail;
-    }
-
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
-    }
-
-    public String getStanowisko() {
-        return stanowisko;
-    }
-
-    public void setStanowisko(String stanowisko) {
-        this.stanowisko = stanowisko;
-    }
-
     @Override
     public String toString() {
         return "Dane pracownika: \n" +

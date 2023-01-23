@@ -18,6 +18,18 @@ public class Opcje{
             }
         }
     }
+    public static int wyborID(){
+        Scanner input = new Scanner(System.in);
+        while(true) {
+            System.out.println("Podaj numer ID: ");
+            String choice = input.next();
+            try {
+                return Integer.parseInt(choice);
+            } catch (NumberFormatException e) {
+                System.out.println("ID musi byc liczba.");
+            }
+        }
+    }
     public static void start(){
         while (true) {
             System.out.println("--------");
@@ -253,20 +265,37 @@ public class Opcje{
             int choice=wyborOpcji();
             if(choice==1) dbList.wypiszKlientow();
             else if(choice==2) dbList.wypiszPracownikow();
-            //else if(choice==3) eksportExcel();
-           // else if(choice==4) importExcel();
+            else if(choice==3) eksportExcel();
+            else if(choice==4) importExcel();
             else if(choice==5){
                 System.out.println("Podaj numer ID klienta");
-                int choice2=wyborOpcji();
+                int choice2=wyborID();
                 dbDelete.deleteKlient(choice2);
             }
             else if(choice==6){
                 System.out.println("Podaj numer ID pracownika");
-                int choice2=wyborOpcji();
+                int choice2=wyborID();
                 dbDelete.deletePracownik(choice2);
             }
             else if(choice==7)break;
             else System.out.println("Niepoprawny wybor.");
         }
+    }
+    public static void eksportExcel(){
+        System.out.println("1.Eksportuj pracownikow\n" +
+                "2.Eksportuj klientow");
+        int choice=wyborOpcji();
+        if (choice==1) Excel.eksportPracownicy();
+        else if(choice==2) Excel.eksportKlienci();
+        else System.out.println("Niepoprawny wybor");
+    }
+
+    public static void importExcel(){
+        System.out.println("1.Importuj pracownikow\n" +
+                "2.Importuj klientow");
+        int choice=wyborOpcji();
+        if (choice==1) Excel.importPracownicy();
+        else if(choice==2) Excel.importKlienci();
+        else System.out.println("Niepoprawny wybor");
     }
 }
