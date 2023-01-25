@@ -126,7 +126,7 @@ public class Excel extends dbCreateObject{
                 try {
                     ResultSet result=QueryExecutor.executeSelect("select * from klienci where username=\"" + username + "\"");
                     result.next();
-                    if(result.getString("username").equals(username))  System.out.println("Nazwa uzytkownika jedego z klientow jest jux zajeta");
+                    if(result.getString("username").equals(username))  System.out.println("Nazwa uzytkownika jedego z klientow jest juz zajeta");
                     break;
                 } catch (SQLException e){
                     if(username.equals("admin")) {
